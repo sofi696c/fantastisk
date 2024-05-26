@@ -1,38 +1,41 @@
 <template>
     <div class="card1">
-        <div>
-            <i class="fas fa-heart"></i>
-        </div>
-
-        <div class="card-middle">
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
-        </div>
-
-        <div>
-            <button class="card1-btn">
-                >
-            </button>
-        </div>
-
+      <div>
+        <i class="fas fa-heart"></i>
+      </div>
+  
+      <div class="card-middle">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+      </div>
+  
+      <div>
+        <button class="card1-btn" @click="navigateToLink">
+          >
+        </button>
+      </div>
     </div>
   </template>
-
-
-<script>
-import '@fortawesome/fontawesome-free/css/all.css';
-
-export default {
-  props: {
-    title: String,
-    description: String
+  
+  <script>
+  import '@fortawesome/fontawesome-free/css/all.css';
+  
+  export default {
+    props: {
+      title: String,
+      description: String,
+      link: String // Tilføj en link-prop
+    },
+    methods: {
+      navigateToLink() {
+        window.location.href = this.link;
+      }
+    }
   }
-}
-</script>
-
-
-<style>
-.card1{
+  </script>
+  
+  <style scoped>
+  .card1 {
     height: 10vh;
     width: 60vh;
     border: none;
@@ -40,29 +43,28 @@ export default {
     padding: 16px;
     margin: 16px;
     border-radius: 20px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-content: space-around;
   }
-
-
+  
   .card-middle {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-
-  h2{
+  
+  h2 {
     font-family: katari;
     color: #1B3F59;
   }
-
- p{
+  
+  p {
     font-family: open sans;
     color: #000000;
- }
-
- button{
+  }
+  
+  button {
     color: none;
     border: none;
     padding: 8px 16px;
@@ -72,12 +74,11 @@ export default {
     margin-top: 12.5%;
     font-family: open sans;
   }
-
-  button:hover{
+  
+  button:hover {
     background-color: none;
     color: #F1C40F;
     transition-duration: 0.4s;
   }
-
-
-</style>
+  </style>
+  

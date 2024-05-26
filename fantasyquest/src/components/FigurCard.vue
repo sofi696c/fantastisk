@@ -1,11 +1,9 @@
 <template>
-    <div class="card">
+    <div class="figur-card">
+      <img :src="imageSrc" alt="Figur Image" class="figur-image" />
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
-      <p v-if="isExpanded">{{ moreText }}</p>
-      <button @click="toggleExpand">
-        {{ isExpanded ? 'Vis mindre' : 'Læs mere' }}
-      </button>
+
     </div>
   </template>
   
@@ -14,37 +12,36 @@
     props: {
       title: String,
       description: String,
-      moreText: String // Tilføj denne prop for at holde ekstra tekst
-    },
-    data() {
-      return {
-        isExpanded: false
-      }
-    },
-    methods: {
-      toggleExpand() {
-        this.isExpanded = !this.isExpanded;
-      }
+      imageSrc: String
     }
   }
   </script>
   
   <style scoped>
-  .card {
+  .figur-card {
     height: fit-content;
-    width: 60vh;
+    width: 38.5vh;
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
     margin: 16px;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    transition: height 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .figur-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
   }
   
   h2 {
     font-family: katari;
     color: #1B3F59;
+    margin-top: 8px;
   }
   
   p {
