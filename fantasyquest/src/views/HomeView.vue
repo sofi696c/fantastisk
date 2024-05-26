@@ -8,7 +8,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -21,7 +21,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Mød de fire kæmper</h3>
-                <p>Kæmperne er fire store, stærke og modige helte, som er udvalgt til at redde verden fra de onde magter.
+                <p class="p1">Kæmperne er fire store, stærke og modige helte, som er udvalgt til at redde verden fra de onde magter.
                   <br><br>Deltag i årets Quest og hjælp dem!
                 </p>
               </div>
@@ -33,7 +33,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -46,7 +46,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -59,7 +59,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -72,7 +72,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -85,7 +85,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -98,7 +98,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -111,7 +111,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -124,7 +124,7 @@
             <div class="carousel-caption d-none d-md-block">
               <div class="text-box-left">
                 <h3>Velkommen til Fantasy Quest Esbjerg</h3>
-                <p>Her på siden finder du alle relevante informationer om årets Quest.
+                <p class="p1">Her på siden finder du alle relevante informationer om årets Quest.
                   <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
                   <br><br>Vi glæder os til at se dig!
                 </p>
@@ -141,16 +141,67 @@
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
+
+      <div class="card-område">
+
+        <h1>Se udvalgte kategorier</h1>
+        <div id="app">
+            <div v-for="card in cards" :key="card.id">
+                <Card :title="card.title" :description="card.description" />
+            </div>
+        </div>
+
+        <h1>Se programmet for Questen</h1>
+        <div id="app-1">
+            <div v-for="card in card1s" :key="card.id">
+                <Card1 :title="card.title" :description="card.description" />
+            </div>
+        </div>
+
+      </div>  
+
+      <div class="figur-section">
+
+      </div>
+
     </main>
   </template>
   
-  <script setup>
+
+
+
+  <script >
+    import Card from '../components/Card.vue';
+    import Card1 from '../components/Card1.vue';
+
+    export default {
+    name: 'App',
+    components: {
+        Card,
+        Card1
+    },
+    data() {
+        return {
+        cards: [
+            { id: 1, title: 'Dags Quest', description: 'Tekst der beskriver dags questen her...' },
+            { id: 2, title: 'Aften Quest', description: 'Tekst der beskriver aften questen her...' },
+        ],
+        card1s: [
+            { id: 1, title: 'Dags Quest', description: 'Lørdag d. 14 September' },
+            { id: 2, title: 'Aften Quest', description: 'Lørdag d. 14 September' },
+        ]
+        }
+    }
+    }
+
+    
 
   </script>
   
   <style lang="scss" scoped>
   main {
-    height: 500vh;
+    height: fit-content; 
+
   }
   
   /* Stilen for hele karousellen */
@@ -202,9 +253,10 @@
   }
   
   /* Stilen for teksten i tekstboksen */
-  .text-box-left p {
+  .text-box-left .p1 {
     font-size: 16px;
     line-height: 1.5;
+    color: #F1C40F;
   }
   
   /* Størrelsen på billederne i karousellen */
@@ -212,5 +264,40 @@
     width: 100%;
     height: 100vh;
   }
+.card-område {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110vh;
+}
+
+
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #F1C40F;
+    font-family: katari;
+    display: flex;
+}
+
+  #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin: 5vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+#app-1 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin: 5vh 0;
+  display: flex;
+  justify-content: center;
+}
   </style>
   
