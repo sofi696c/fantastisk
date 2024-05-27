@@ -31,7 +31,7 @@
   
   <style scoped>
   .card {
-    height: fit-content;
+    height: 35vh;
     width: 60vh;
     border: none;
     background-color: #E4E0D9;
@@ -60,7 +60,6 @@
     border-radius: 15px;
     width: 30%;
     align-self: center;
-    margin-top: 12.5%;
     font-family: open sans;
   }
   

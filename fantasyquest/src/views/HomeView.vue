@@ -224,10 +224,24 @@
             { id: 2, title: 'Aften Quest', description: 'Lørdag d. 14 September', link:"https://www.universe.com/events/fantasy-quest-aftenquest-tickets-2PCHR4" },
         ],
         figurCards: [
-            { id: 1, title: 'Arkivaren', description: 'Akrivaren er den vise og lærde vogter af Esbjergs ældgamle skrifter og magiske artefakter. Han er en mester i fortryllelser og hemmeligheder, og hans dybe viden om fortidens magi er uundværlig i kampen mod ondskaben. Med sin enorme bogsamling og sin evne til at tyde gamle spådomme, rådgiver han heltene i deres færd.'},
-            { id: 2, title: 'Gygaz', description: 'Gygaz den Vise er en mægtig troldmand og portalmester. Han er kendt for at have åbnet portalen til kæmpernes verden og for sin rolle i at bringe de fire vogtere til Esbjerg. Med sin dybe forståelse af magiske formularer og portaler er Gygaz en uundværlig beskytter, der bruger sin magi til at holde det onde i skak og vejlede heltene på deres rejse.' },
-            { id: 3, title: 'Malice', description: 'Malice er en skyggefuld og ond kraft, der truer Esbjerg med sin mørke magi. Hun er en skikkelse fra en anden verden, drevet af et ønske om kaos og ødelæggelse. Med sine farlige fortryllelser og evnen til at manipulere skygger, er hun en formidabel fjende, som heltene må stå sammen for at bekæmpe.'},
-        ]
+    { 
+        id: 1, 
+        title: 'Arkivaren', 
+        description: 'Akrivaren er den vise og lærde vogter af Esbjergs ældgamle skrifter og magiske artefakter. Han er en mester i fortryllelser og hemmeligheder, og hans dybe viden om fortidens magi er uundværlig i kampen mod ondskaben. Med sin enorme bogsamling og sin evne til at tyde gamle spådomme, rådgiver han heltene i deres færd.',
+        image: () => import('../assets/Arkivaren.jpg')    },
+    { 
+        id: 2, 
+        title: 'Gygaz', 
+        description: 'Gygaz den Vise er en mægtig troldmand og portalmester. Han er kendt for at have åbnet portalen til kæmpernes verden og for sin rolle i at bringe de fire vogtere til Esbjerg. Med sin dybe forståelse af magiske formularer og portaler er Gygaz en uundværlig beskytter, der bruger sin magi til at holde det onde i skak og vejlede heltene på deres rejse.',
+        image: () => import('../assets/Gygaz.jpg')
+    },
+    { 
+        id: 3, 
+        title: 'Malice', 
+        description: 'Malice er en skyggefuld og ond kraft, der truer Esbjerg med sin mørke magi. Hun er en skikkelse fra en anden verden, drevet af et ønske om kaos og ødelæggelse. Med sine farlige fortryllelser og evnen til at manipulere skygger, er hun en formidabel fjende, som heltene må stå sammen for at bekæmpe.',
+        image: () => import('../assets/Malice.jpg')
+    },
+]
         }
     }
     }
