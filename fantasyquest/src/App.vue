@@ -2,6 +2,7 @@
   import { RouterView } from 'vue-router'
   import portHeader from './components/Header.vue';
   import portFooter from './components/Footer.vue';
+  
 
  
 </script>
@@ -11,7 +12,7 @@
     <portHeader />
     <RouterView />
     <portFooter />
-
+    
   </div>
   <Carousel />
 

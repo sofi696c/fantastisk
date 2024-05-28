@@ -54,7 +54,7 @@
     }
     h1{
         padding-bottom: 3vh;
-        font-family: 'Pacifico', cursive;
+        font-family: 'Times New Roman', Times, serif;
         font-size: 50px;
     }
 
@@ -97,7 +97,7 @@
 
         h1{
         padding-bottom: 3vh;
-        font-family: 'Pacifico', cursive;
+        font-family: 'Times New Roman', Times, serif;
         font-size: 24px;
     }
       

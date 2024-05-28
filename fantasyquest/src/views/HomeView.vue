@@ -130,12 +130,7 @@
 
         </div>
   
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+        
       </div>
 
       <div class="card-område">
@@ -298,7 +293,7 @@
   /* Positionering og styling af karouselltekster */
   .carousel-caption {
     position: absolute;
-    bottom: 35%;
+    bottom: 20%;
     left: 50px;
     display: inline-block;
   }
@@ -318,7 +313,7 @@
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: katari;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   /* Stilen for teksten i tekstboksen */
@@ -347,7 +342,7 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     color: #F1C40F;
-    font-family: katari;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
 }
 
@@ -365,7 +360,7 @@ h1 {
 .historien {
     font-size: 22px;
     color: #E4E0D9;
-    font-family: katari;
+    font-family: 'Times New Roman', Times, serif;
     margin: 5vh 30vh;
     font-style: italic;
 }
@@ -396,6 +391,8 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: center;
 }
+
+
 
   </style>
   

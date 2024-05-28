@@ -40,7 +40,7 @@
   }
   
   h2 {
-    font-family: katari;
+    font-family: 'Times New Roman', Times, serif;
     color: #1B3F59;
     margin-top: 8px;
   }
@@ -50,7 +50,8 @@
     color: #000000;
   }
   
-  button {
+  /* hvilken knap er dette? */
+  /* button {
     background-color: #1B3F59;
     color: white;
     border: none;
@@ -66,6 +67,8 @@
     background-color: #F1C40F;
     color: #000000;
     transition-duration: 0.4s;
-  }
+  } */
+
+ 
   </style>
   

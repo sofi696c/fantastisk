@@ -31,8 +31,8 @@
   
   <style scoped>
   .card {
-    height: 35vh;
-    width: 60vh;
+    height: auto;
+    width: auto;
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -43,7 +43,7 @@
   }
   
   h2 {
-    font-family: katari;
+    font-family: 'Times New Roman', Times, serif;
     color: #1B3F59;
   }
   
@@ -58,7 +58,7 @@
     border: none;
     padding: 8px 16px;
     border-radius: 15px;
-    width: 30%;
+    width: auto;
     align-self: center;
     font-family: open sans;
   }
