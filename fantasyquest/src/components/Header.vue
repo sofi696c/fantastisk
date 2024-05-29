@@ -20,8 +20,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import anime from 'animejs';
 import Burger from './Burger.vue';
+
 
 const isSticky = ref(false);
 
@@ -35,7 +37,17 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 
 window.removeEventListener('scroll', handleScroll);
-  
+
+onMounted(() => {
+  anime({
+    targets: '.gnist',
+    translateX: [-300, 0], // from 100 to 250
+    delay: 500,
+    direction: 'alternate',
+    loop: false,
+    duration: 3000,
+  });
+});
 </script>
 
 <style scoped>

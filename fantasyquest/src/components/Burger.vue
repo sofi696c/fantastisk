@@ -1,6 +1,6 @@
 <template>
     <div>
-      <button @click="toggleMenu" class="burger-menu">
+      <button @click="toggleMenu" :class="['burger-menu', { 'spin': menuOpen, 'color-change': menuOpen }]">
         <span></span>
         <span></span>
         <span></span>
@@ -42,16 +42,25 @@
     border: none;
     padding: 0;
     z-index: 10;
+    transition: transform 0.5s ease; /* Added for smooth transformation */
   }
 
+  .burger-menu.spin {
+  transform: rotate(360deg); /* Spin animation */
+}
+
+.burger-menu.color-change span {
+  background: #F1C40F; /* New color for the spans when clicked */
+}
   
   .burger-menu span {
     width: 30px;
     height: 3px;
     background: white;
     border-radius: 5px;
-   
+    transition: background-color 0.5s ease; /* Smooth transition for span color */
   }
+
 
   
   

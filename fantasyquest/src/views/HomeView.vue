@@ -145,14 +145,14 @@
         <h1>Se programmet for Questen</h1>
         <div id="app-1">
             <div v-for="card in card1s" :key="card.id">
-                <Card1 :title="card.title" :description="card.description" />
+                <Card1 :title="card.title" :description="card.description" :link="card.link" />
             </div>
         </div>
 
       </div>  
 
       <div class="figur-section">
-        <h1>Fantasy Quest</h1>
+        <h1>Historien</h1>
         <p class="historien"> ”I gamle dage sagde man... <br>
             ...at det onde ville komme fra havet. Gennem generationer blev den fortælling givet videre. 
             Man hørte den, da Esbjerg blev grundlagt i 1868. Man holdt altid øje med havet. Mod vest. <br>
@@ -200,6 +200,8 @@
     import Card from '../components/Card.vue';
     import Card1 from '../components/Card1.vue';
     import FigurCard from '../components/FigurCard.vue';
+    
+    
 
     export default {
     name: 'App',
@@ -215,7 +217,7 @@
             { id: 2, title: 'Aften Quest', description: 'Når tusmørket begynder at sænke sig over Esbjerg, skrues sværhedsgraden i AftenQuesten op. Nu skal der virkelig tænkes kreativt og løses opgaver, der kræver både mod, samarbejde og snilde for at I kan gennemføre questen og redde Esbjerg.', moreText: 'Er du vild med at løse gåder og knække koder, så må du ikke snyde dig selv for denne ultimative oplevelse. Vi sender dig og vennerne ud på jeres ultimative eventyr i Esbjergs gader og stræder. Her vil I blive nødt til at samarbejde og udtænke nye løsninger for at gennemføre AftenQuesten.' },
         ],
         card1s: [
-            { id: 1, title: 'Dags Quest', description: 'Lørdag d. 14 September', link:"https://www.universe.com/events/fantasy-quest-dagsquest-tickets-2PCHQ4" },
+            { id: 1, title: 'Dags Quest', description: 'Lørdag d. 14 September', link:"https://www.universe.com/events/family-quest-dagquest-tickets-C6PYX3" },
             { id: 2, title: 'Aften Quest', description: 'Lørdag d. 14 September', link:"https://www.universe.com/events/fantasy-quest-aftenquest-tickets-2PCHR4" },
         ],
         figurCards: [
@@ -236,28 +238,31 @@
         description: 'Malice er en skyggefuld og ond kraft, der truer Esbjerg med sin mørke magi. Hun er en skikkelse fra en anden verden, drevet af et ønske om kaos og ødelæggelse. Med sine farlige fortryllelser og evnen til at manipulere skygger, er hun en formidabel fjende, som heltene må stå sammen for at bekæmpe.',
         image: () => import('../assets/Malice.jpg')
     },
+    {
+      id: 4,
+      title: 'Gnist',
+      description: 'Gnist er en unik skabning, der kan skifte mellem form som en mægtig drage og en modig mand. Som drage besidder han ildens magt, med skinnende skæl og flammende ånde. Som mand er han klog og taktisk, altid parat til at beskytte Esbjerg med sit brændende hjerte og sine magiske evner. Gnists dualitet gør ham til en uvurderlig allieret i kampen mod mørkets kræfter.',
+      image: () => import('../assets/Gnist.jpg')
+    },
+    {
+      id: 5,
+      title: 'Havfruedronningen',
+      description: 'Havfruedronningen er hersker over havets dybder og beskytter af undervandsriget. Hun er en majestætisk og nådefuld skikkelse, med en mystisk skønhed og en kraftfuld stemme, der kan berolige storme og kalde på havets væsener. Hendes alliance med Esbjergs vogtere er afgørende for at holde havets ondskab i skak.',
+      image: () => import('../assets/Havfruedronning.jpg')
+    },
+    {
+      id: 6,
+      title: 'Portal',
+      description: 'Portal er en magisk åbning skabt af Gygaz, der forbinder Esbjerg med andre verdener. Den er emnet for årets quest, da det er gennem denne portal, at både hjælpere og trusler kan komme. Portalen er en kilde til både muligheder og farer, og heltene må finde en måde at kontrollere den på for at forhindre ondskabens kræfter i at trænge igennem.',
+      image: () => import('../assets/Portal.jpg')
+    }
+    
 ]
         }
     }
     }
 
-    /* Beskrivelse af de manglende figurer
-    Gnist:
-    Gnist er en unik skabning, der kan skifte mellem form som en mægtig drage og en modig mand. 
-    Som drage besidder han ildens magt, med skinnende skæl og flammende ånde. Som mand er han klog og 
-    taktisk, altid parat til at beskytte Esbjerg med sit brændende hjerte og sine magiske evner. Gnists 
-    dualitet gør ham til en uvurderlig allieret i kampen mod mørkets kræfter. 
     
-    Havfruedronningen:
-    Havfruedronningen er hersker over havets dybder og beskytter af undervandsriget. Hun er en majestætisk 
-    og nådefuld skikkelse, med en mystisk skønhed og en kraftfuld stemme, der kan berolige storme og kalde 
-    på havets væsener. Hendes alliance med Esbjergs vogtere er afgørende for at holde havets ondskab i skak.
-
-    Portalen:
-    Portalen er en magisk åbning skabt af Gygaz, der forbinder Esbjerg med andre verdener. Den er emnet for 
-    årets quest, da det er gennem denne portal, at både hjælpere og trusler kan komme. Portalen er en kilde 
-    til både muligheder og farer, og heltene må finde en måde at kontrollere den på for at forhindre 
-    ondskabens kræfter i at trænge igennem.*/
 
   </script>
   
@@ -343,12 +348,13 @@ h1 {
     font-weight: 700;
     color: #F1C40F;
     font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
     display: flex;
 }
 
 .figur-section {
     height: fit-content;
-    width: 100%;
+    width: auto;
     background-color: #2c3e50;
     display: flex;
     justify-content: center;
@@ -393,6 +399,17 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
 
+@media (max-width: 768px) {
+    .historien {
+        font-size: 16px;
+        margin: 5vh 4vw;
+    }
+    
+    
+
+}
+  
 
   </style>
   
+

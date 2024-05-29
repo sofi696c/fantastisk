@@ -20,7 +20,7 @@
   <style scoped>
   .figur-card {
     height: fit-content;
-    width: 38.5vh;
+    width: auto;
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -69,6 +69,21 @@
     transition-duration: 0.4s;
   } */
 
- 
+  @media (max-width: 768px) {
+    .figur-card {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        margin: 10px; 
+      }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
   </style>
   

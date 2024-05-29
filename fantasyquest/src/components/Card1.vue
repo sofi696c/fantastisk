@@ -1,7 +1,7 @@
 <template>
     <div class="card1">
-      <div>
-        <i class="fas fa-heart"></i>
+      <div class="icon-div">
+        <font-awesome-icon class="fa-calendar" icon="calendar" />
       </div>
   
       <div class="card-middle">
@@ -9,32 +9,43 @@
         <p>{{ description }}</p>
       </div>
   
-      <div>
+      <div class="button-div">
         <button class="card1-btn" @click="navigateToLink">
-          >
+          <p class="p-btn">Se mere</p>
         </button>
+        
       </div>
     </div>
+    
   </template>
   
   <script>
-  import '@fortawesome/fontawesome-free/css/all.css';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   
+
   export default {
     props: {
       title: String,
       description: String,
       link: String // Tilføj en link-prop
     },
+    components: {
+    FontAwesomeIcon
+  },
     methods: {
-      navigateToLink() {
-        window.location.href = this.link;
+      navigateToLink(){
+        window.open(this.link, '_blank');
       }
     }
   }
   </script>
   
   <style scoped>
+
+  .fa-calendar {
+    font-size: 50px;
+    color: #1B3F59;
+  }
   .card1 {
     height: auto;
     width: auto;
@@ -52,6 +63,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 20px;
   }
   
   h2 {
@@ -64,20 +76,36 @@
     color: #000000;
   }
   
-  button {
-    color: none;
+  .icon-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;}
+
+  .button-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .card1-btn{
+    background-color: #1B3F59;
+    color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 15px;
-    width: 30%;
+    width: auto;
     align-self: center;
-    margin-top: 12.5%;
     font-family: open sans;
   }
+  .p-btn{
+    font-family: open sans;
+    color: #ffffff;
+    margin:0;
   
-  button:hover {
-    background-color: none;
-    color: #F1C40F;
+  }
+  .card1-btn:hover {
+    background-color: #F1C40F;
+    color: #000000;
     transition-duration: 0.4s;
   }
   </style>
