@@ -57,20 +57,24 @@
   
 
   @media (max-width: 768px) {
-    .figur-card {
-        width: auto;
-        height: auto;
-        padding: 10px;
-        margin: 10px; 
-      }
+    
+  .figur-card {
+    width: calc(100% -32px); /* One card per row */
+  }
+
 
     h2 {
         font-size: 1.2em;
+      ;
     }
 
     p {
         font-size: 0.9em;
+        
+  
+
     }
+
 }
   </style>
   

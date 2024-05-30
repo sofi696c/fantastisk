@@ -33,6 +33,7 @@
   .card {
     height: auto;
     width: auto;
+    
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -50,6 +51,9 @@
   p {
     font-family: open sans;
     color: #000000;
+    width: 100%;
+ 
+  
   }
   
   button {
@@ -67,6 +71,12 @@
     background-color: #F1C40F;
     color: #000000;
     transition-duration: 0.4s;
+  }
+
+  @media screen and (max-width: 768px){
+    .card {
+    width: calc(100% - 40px); /* One card per row */
+  }
   }
   </style>
   

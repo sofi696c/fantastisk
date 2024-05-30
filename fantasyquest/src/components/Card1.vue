@@ -112,5 +112,16 @@
     color: #000000;
     transition-duration: 0.4s;
   }
+
+  @media screen and (max-width: 768px){
+    .card1 {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .card-middle {
+      padding: 0;
+    }
+  }
   </style>
   

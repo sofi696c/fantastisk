@@ -95,6 +95,11 @@
         font-family: 'Times New Roman', Times, serif;
         font-size: 24px;
     }
+
+    .gnist {
+        height: 10vh;
+        width: auto;
+    }
       
     }
 </style>

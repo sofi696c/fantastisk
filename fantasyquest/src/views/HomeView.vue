@@ -137,7 +137,7 @@
 
         <h1>Se udvalgte kategorier</h1>
         <div id="app">
-            <div v-for="card in cards" :key="card.id">
+            <div class="kategori-cards" v-for="card in cards" :key="card.id">
                 <Card :title="card.title" :description="card.description" :moreText="card.moreText"/>
             </div>
         </div>
@@ -432,12 +432,33 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
+  .carousel-item::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  }
+
+  .program{
+    font-size: 32px;
+  }
+  h1{
+    font-size: 32px;
+  }
     .historien {
         font-size: 16px;
         margin: 5vh 4vw;
     }
     
-    
+.card-område {
+  width: calc(100% - 32px);
+}
+.kategori-cards{
+  width: 50%;    
+}
+
+.figur-row{
+  width:50% ;
+}
+
+
 
 }
   
