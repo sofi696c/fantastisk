@@ -21,8 +21,9 @@
   </script>
   
   <style scoped>
+  
   .figur-card {
-    height: auto;
+    height: 95%;
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -37,7 +38,7 @@
   
   .figur-image {
     
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 20px 20px 0 0;
   }

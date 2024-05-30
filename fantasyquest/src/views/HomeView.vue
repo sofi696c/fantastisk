@@ -184,7 +184,7 @@
         </p>
         <div class="figur-container">
             <div id="app-2">
-                <div v-for="figurCard in figurCards" :key="figurCard.id">
+                <div class="figur-row" v-for="figurCard in figurCards" :key="figurCard.id">
                     <FigurCard 
                     :title="figurCard.title" 
                     :description="figurCard.description"
@@ -413,6 +413,7 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
   
   
   
+  
 }
 
 .figur-container {
@@ -420,9 +421,14 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    width:30%;
+    
+    
    
     
+}
+
+.figur-row{
+  width:33.333% ;
 }
 
 @media (max-width: 768px) {
