@@ -75,6 +75,7 @@
   p {
     font-family: open sans;
     color: #000000;
+    margin-bottom: 0%;
   }
   
   .icon-div{

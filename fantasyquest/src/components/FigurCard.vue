@@ -23,7 +23,6 @@
   <style scoped>
   .figur-card {
     height: auto;
-    width: calc(33.33% - 20px);
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -33,6 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   
   .figur-image {

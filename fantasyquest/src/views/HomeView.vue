@@ -412,14 +412,15 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
   justify-content: space-between;
   
   
+  
 }
 
 .figur-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    width:30%;
    
     
 }
