@@ -50,24 +50,7 @@
     color: #000000;
   }
   
-  /* hvilken knap er dette? */
-  /* button {
-    background-color: #1B3F59;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 15px;
-    width: 30%;
-    align-self: center;
-    margin-top: 12.5%;
-    font-family: open sans;
-  }
   
-  button:hover {
-    background-color: #F1C40F;
-    color: #000000;
-    transition-duration: 0.4s;
-  } */
 
   @media (max-width: 768px) {
     .figur-card {

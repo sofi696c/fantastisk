@@ -142,7 +142,7 @@
             </div>
         </div>
 
-        <h1>Se programmet for Questen</h1>
+        <h1 class="program">Se programmet for Questen</h1>
         <div id="app-1">
             <div v-for="card in card1s" :key="card.id">
                 <Card1 :title="card.title" :description="card.description" :link="card.link" />

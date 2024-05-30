@@ -10,7 +10,7 @@
 
       <ul class="nav-routes">
         <li><a href="https://fantasyfestival.dk/" target="_blank">Fantasyfestivalens hjemmeside</a></li>          
-        <li><router-link to="/mine-projekter">Se program</router-link></li>
+        <li><router-link @click="scrollToProgram">Se program</router-link></li>
         <li><a href="https://www.universe.com/explore?query=Quest&loc=Esbjerg%252C%2520Danmark&ll=55.476466%252C8.459405" target="_blank">Billetter</a></li>
       </ul>
       <Burger class="burger-component" />
@@ -24,6 +24,8 @@ import { ref, onMounted } from 'vue';
 import anime from 'animejs';
 import Burger from './Burger.vue';
 
+   
+
 
 const isSticky = ref(false);
 
@@ -32,6 +34,14 @@ const handleScroll = () => {
   isSticky.value = window.scrollY > 0;
   
 };
+
+/* const scrollToProgram = () => {
+  const programSection = document.getElementById('.program');
+  if (programSection) {
+    programSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+ */
 
 // Listen for scroll event
 window.addEventListener('scroll', handleScroll);
