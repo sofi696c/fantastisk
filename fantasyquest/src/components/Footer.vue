@@ -15,19 +15,10 @@
                 <div class="column">
                     <nav>
                         <ul class="nav-routes">
-                            <li><RouterLink to="/hjem">Tilbage til toppen</RouterLink></li>
+                            <li> <a href="#demo">Tilbage til toppen</a></li>
                         </ul>
                     </nav>
                 </div>
-
-                <div class="column">
-
-                </div>
-
-                <div class="column">
-
-                </div>
-                
             </div>
         </div>
     </footer>
@@ -35,15 +26,18 @@
 
 <style lang="scss" scoped>
     footer {
-        background-color: #1B3F59;
-        height: 40vh;
+        background-color: #2c3e50;
+        height: auto
+       
     }
 
     .card {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        height: 100%;
+        flex-direction: row;
+        height: auto;
+        background-color:#2c3e50;
     }
     
     .column {
@@ -71,9 +65,10 @@
         display: flex;
         flex: 1;
         justify-content: flex-end;
+       
         gap: 12px;
         list-style: none;
-        color: white;
+        color: white; 
     }
 
     .nav-routes a {

@@ -51,7 +51,8 @@
     width: auto;
     border: none;
     background-color: #E4E0D9;
-    padding: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 16px;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -79,7 +80,9 @@
   .icon-div{
     display: flex;
     justify-content: space-around;
-    align-items: center;}
+    align-items: center;
+  
+  }
 
   .button-div {
     display: flex;

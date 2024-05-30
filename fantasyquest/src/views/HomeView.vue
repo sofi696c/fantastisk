@@ -142,7 +142,7 @@
             </div>
         </div>
 
-        <h1 class="program">Se programmet for Questen</h1>
+        <h1 id="programscroll" class="program">Se programmet for Questen</h1>
         <div id="app-1">
             <div v-for="card in card1s" :key="card.id">
                 <Card1 :title="card.title" :description="card.description" :link="card.link" />
@@ -182,11 +182,17 @@
 
             Det er tid til Fantasy Quest Esbjerg. Er du klar?
         </p>
-        <div id="app-2">
-            <div v-for="figurCard in figurCards" :key="figurCard.id">
-                <FigurCard :title="figurCard.title" :description="figurCard.description" />
+        <div class="figur-container">
+            <div id="app-2">
+                <div v-for="figurCard in figurCards" :key="figurCard.id">
+                    <FigurCard 
+                    :title="figurCard.title" 
+                    :description="figurCard.description"
+                    :image="figurCard.image"
+                    />
+                </div>
             </div>
-        </div>
+          </div>  
 
       </div>
 
@@ -200,7 +206,12 @@
     import Card from '../components/Card.vue';
     import Card1 from '../components/Card1.vue';
     import FigurCard from '../components/FigurCard.vue';
-    
+    import imageOne from '../assets/Arkivaren.jpg';
+    import imageTwo from '../assets/Gygaz.jpg';
+    import imageThree from '../assets/Malice.jpg';
+    import imageFour from '../assets/Gnist.jpg';
+    import imageFive from '../assets/Havfruedronning.jpg';
+    import imageSix from '../assets/Portal.jpg';
     
 
     export default {
@@ -225,36 +236,37 @@
         id: 1, 
         title: 'Arkivaren', 
         description: 'Akrivaren er den vise og lærde vogter af Esbjergs ældgamle skrifter og magiske artefakter. Han er en mester i fortryllelser og hemmeligheder, og hans dybe viden om fortidens magi er uundværlig i kampen mod ondskaben. Med sin enorme bogsamling og sin evne til at tyde gamle spådomme, rådgiver han heltene i deres færd.',
-        image: () => import('../assets/Arkivaren.jpg')    },
+        image: imageOne   
+      },
     { 
         id: 2, 
         title: 'Gygaz', 
         description: 'Gygaz den Vise er en mægtig troldmand og portalmester. Han er kendt for at have åbnet portalen til kæmpernes verden og for sin rolle i at bringe de fire vogtere til Esbjerg. Med sin dybe forståelse af magiske formularer og portaler er Gygaz en uundværlig beskytter, der bruger sin magi til at holde det onde i skak og vejlede heltene på deres rejse.',
-        image: () => import('../assets/Gygaz.jpg')
+        image: imageTwo
     },
     { 
         id: 3, 
         title: 'Malice', 
         description: 'Malice er en skyggefuld og ond kraft, der truer Esbjerg med sin mørke magi. Hun er en skikkelse fra en anden verden, drevet af et ønske om kaos og ødelæggelse. Med sine farlige fortryllelser og evnen til at manipulere skygger, er hun en formidabel fjende, som heltene må stå sammen for at bekæmpe.',
-        image: () => import('../assets/Malice.jpg')
+        image: imageThree
     },
     {
       id: 4,
       title: 'Gnist',
       description: 'Gnist er en unik skabning, der kan skifte mellem form som en mægtig drage og en modig mand. Som drage besidder han ildens magt, med skinnende skæl og flammende ånde. Som mand er han klog og taktisk, altid parat til at beskytte Esbjerg med sit brændende hjerte og sine magiske evner. Gnists dualitet gør ham til en uvurderlig allieret i kampen mod mørkets kræfter.',
-      image: () => import('../assets/Gnist.jpg')
+      image: imageFour
     },
     {
       id: 5,
       title: 'Havfruedronningen',
       description: 'Havfruedronningen er hersker over havets dybder og beskytter af undervandsriget. Hun er en majestætisk og nådefuld skikkelse, med en mystisk skønhed og en kraftfuld stemme, der kan berolige storme og kalde på havets væsener. Hendes alliance med Esbjergs vogtere er afgørende for at holde havets ondskab i skak.',
-      image: () => import('../assets/Havfruedronning.jpg')
+      image: imageFive
     },
     {
       id: 6,
       title: 'Portal',
       description: 'Portal er en magisk åbning skabt af Gygaz, der forbinder Esbjerg med andre verdener. Den er emnet for årets quest, da det er gennem denne portal, at både hjælpere og trusler kan komme. Portalen er en kilde til både muligheder og farer, og heltene må finde en måde at kontrollere den på for at forhindre ondskabens kræfter i at trænge igennem.',
-      image: () => import('../assets/Portal.jpg')
+      image: imageSix
     }
     
 ]
@@ -361,6 +373,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     padding-top: 10vh;
+    
 }
 
 .historien {
@@ -395,9 +408,21 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
   margin: 5vh 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  
 }
 
+.figur-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+   
+    
+}
 
 @media (max-width: 768px) {
     .historien {

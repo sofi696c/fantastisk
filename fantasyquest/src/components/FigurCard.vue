@@ -1,10 +1,13 @@
 <template>
+  
     <div class="figur-card">
-      <img :src="imageSrc" alt="Figur Image" class="figur-image" />
+      <img :src="image" alt="Figur Image" class="figur-image" />
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
 
-    </div>
+    
+ 
+  </div>
   </template>
   
   <script>
@@ -12,15 +15,15 @@
     props: {
       title: String,
       description: String,
-      imageSrc: String
+      image: String
     }
   }
   </script>
   
   <style scoped>
   .figur-card {
-    height: fit-content;
-    width: auto;
+    height: auto;
+    width: calc(33.33% - 20px);
     border: none;
     background-color: #E4E0D9;
     padding: 16px;
@@ -33,8 +36,8 @@
   }
   
   .figur-image {
-    height: 100px;
-    width: 100%;
+    
+    width: 50%;
     height: auto;
     border-radius: 20px 20px 0 0;
   }

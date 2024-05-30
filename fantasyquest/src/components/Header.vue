@@ -10,7 +10,7 @@
 
       <ul class="nav-routes">
         <li><a href="https://fantasyfestival.dk/" target="_blank">Fantasyfestivalens hjemmeside</a></li>          
-        <li><router-link @click="scrollToProgram">Se program</router-link></li>
+        <li><a href="#programscroll">Se program</a></li>
         <li><a href="https://www.universe.com/explore?query=Quest&loc=Esbjerg%252C%2520Danmark&ll=55.476466%252C8.459405" target="_blank">Billetter</a></li>
       </ul>
       <Burger class="burger-component" />
@@ -27,7 +27,7 @@ import Burger from './Burger.vue';
    
 
 
-const isSticky = ref(false);
+const isSticky = ref(true);
 
 // Function to handle scroll event
 const handleScroll = () => {
@@ -35,13 +35,6 @@ const handleScroll = () => {
   
 };
 
-/* const scrollToProgram = () => {
-  const programSection = document.getElementById('.program');
-  if (programSection) {
-    programSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
- */
 
 // Listen for scroll event
 window.addEventListener('scroll', handleScroll);
@@ -49,6 +42,7 @@ window.addEventListener('scroll', handleScroll);
 window.removeEventListener('scroll', handleScroll);
 
 onMounted(() => {
+  
   anime({
     targets: '.gnist',
     translateX: [-300, 0], // from 100 to 250
@@ -103,6 +97,7 @@ nav {
   gap: 12px;
   list-style: none;
   color: white;
+  
 }
 
 .nav-routes a {
@@ -125,7 +120,7 @@ nav {
   nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 25px 16px;
   }
   
