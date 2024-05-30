@@ -5,22 +5,23 @@
  
 <template>
     <footer>
-        <div class="card">
+        
             <div class="column">
                 <div class="logo">
                     <img class="gnist" src="../assets/gul-logo.png" alt="gult logo af dragen Gnist">
                 </div>
-            </div>
-            <div class="column">
-                <div class="column">
                     <nav>
                         <ul class="nav-routes">
                             <li> <a href="#demo">Tilbage til toppen</a></li>
                         </ul>
                     </nav>
-                </div>
             </div>
-        </div>
+            <
+            
+                    
+                
+        
+        
     </footer>
 </template>
 
@@ -31,20 +32,12 @@
        
     }
 
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        height: auto;
-        background-color:#2c3e50;
-    }
-    
+   
     .column {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
     }
     h1{
         padding-bottom: 3vh;
@@ -57,10 +50,13 @@
     }
 
     .gnist {
-        height: 30vh;
+        height: 20vh;
         width: auto;
+        display: flex;
+        padding-left: 50px;
+    
     }
-
+    
     .nav-routes {
         display: flex;
         flex: 1;
@@ -75,6 +71,7 @@
         text-decoration: none;
         color: inherit;
         transition: 0.4s; /* Moved transition here for smoother effect */
+        padding-right: 50px;
     }
 
     .nav-routes a:hover {
@@ -82,6 +79,7 @@
         cursor: pointer;
         text-decoration: underline;
     }
+   
 
     @media screen and (max-width: 768px) {
         .nav-routes {
@@ -100,6 +98,10 @@
         height: 10vh;
         width: auto;
     }
-      
+    .card{
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-evenly;
+    }
     }
 </style>

@@ -6,7 +6,7 @@
   
       <div class="card-middle">
         <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
+        <p class="p-middle">{{ description }}</p>
       </div>
   
       <div class="button-div">
@@ -121,6 +121,15 @@
 
     .card-middle {
       padding: 0;
+    }
+
+    .p-middle{
+      
+      margin-bottom: 8px;
+    }
+
+    h2{
+      margin-top: 8px;
     }
   }
   </style>

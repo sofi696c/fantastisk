@@ -451,7 +451,7 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
   width: calc(100% - 32px);
 }
 .kategori-cards{
-  width: 50%;    
+  width: 100%;    
 }
 
 .figur-row{
